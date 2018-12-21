@@ -1,0 +1,272 @@
+=========== PGDB comparison report generated on 2017-08-16 using version 201707 ===========
+
+KB-1: ~brg/aic/pgdbs/tier1/ecocyc/18.0/kb/ecobase.ocelot
+KB-2: ~brg/aic/pgdbs/tier1/ecocyc/18.1/kb/ecobase.ocelot
+
+
+Basic reaction stats for KB-1 and KB-2
+--------------------------------------
+Basic reaction stats for ECOLI version 18.0:
+Length all-rxns :all       = 2317
+Length all-rxns :metab-all = 1781
+Length all-rxns :transport = 392
+Number of rxns not included in FBA = 144
+Reactions not included in FBA that are balanced = 0 out of 144
+
+
+Basic reaction stats for ECOLI version 18.1:
+Length all-rxns :all       = 2342
+Length all-rxns :metab-all = 1796
+Length all-rxns :transport = 403
+Number of rxns not included in FBA = 143
+Reactions not included in FBA that are balanced = 0 out of 143
+
+
+Comparison statistics
+---------------------
+Number of unique reactions: KB-1 (18.0) = 7   KB-2 (18.1) = 32
+Number of reactions with same IDs between KB-1 and KB-2 = 2310
+               exact:    2251
+             swapped:       0
+            diff-dir:      23
+    swapped-diff-dir:       0
+ same-subs-diff-cpds:       0
+           diff-subs:      36
+
+
+Unique reactions in KB-1 and KB-2
+---------------------------------
+Unique reactions in KB-1 (18.0): 7
+L2R   RXN0-3441
+NIL   RXN0-5322
+L2R   NADNUCLEOSID-RXN
+L2R   RXN-13872
+L2R   3.2.1.89-RXN
+L2R   RXN-13873
+NIL   RXN0-6991
+
+Unique reactions in KB-2 (18.1): 32
+L2R   TRANS-RXN0-583
+L2R   RXN-15512
+L2R   RXN-15509
+NIL   RXN0-7094
+NIL   RXN0-7096
+NIL   RXN0-7095
+L2R   RXN-15510
+L2R   RXN0-7100
+NIL   RXN0-7092
+L2R   RXN0-7090
+BOTH  RXN-6268
+BOTH  RXN-15513
+L2R   RXN-15356
+L2R   RXN-15348
+L2R   RXN-15346
+L2R   RXN-15345
+L2R   RXN-15341
+L2R   RXN-14997
+L2R   RXN-13859
+BOTH  RXN-10851
+L2R   TRANS-RXN0-592
+L2R   TRANS-RXN0-589
+L2R   TRANS-RXN0-586
+L2R   TRANS-RXN0-590
+L2R   TRANS-RXN0-587
+L2R   TRANS-RXN0-584
+L2R   TRANS-RXN0-591
+L2R   TRANS-RXN0-588
+L2R   TRANS-RXN0-585
+L2R   TRANS-RXN0-582
+L2R   RXN0-7097
+L2R   RXN-15511
+
+Inexact reaction matches between KB-1 and KB-2
+----------------------------------------------
+Note: Format is ((left-cpds) (right-cpds)) whenever cpds are shown.
+
+swapped: Reactions that swapped sides L2R/R2L but are effectively the same: 0
+
+diff-dir: Same reaction but different reaction direction: 23
+KB-1  KB-2  RXN-ID
+NIL   L2R   RXN0-5311
+NIL   L2R   RXN-12480
+NIL   L2R   RXN-11592
+NIL   L2R   RXN0-6366
+BOTH  L2R   UROPORIIIMETHYLTRANSA-RXN
+L2R   BOTH  PYRUFLAVREDUCT-RXN
+NIL   L2R   2.1.1.34-RXN
+NIL   L2R   RXN-11865
+NIL   L2R   RXN0-7003
+BOTH  NIL   DIACYLGLYKIN-RXN
+L2R   BOTH  TRANS-RXN0-490
+NIL   L2R   TRANS-RXN-168
+BOTH  L2R   SUCCINATE-DEHYDROGENASE-UBIQUINONE-RXN
+BOTH  L2R   ADENYL-KIN-RXN
+NIL   L2R   2.1.1.72-RXN
+NIL   L2R   TRNA-GUANINE-N7--METHYLTRANSFERASE-RXN
+NIL   L2R   DNA-CYTOSINE-5--METHYLTRANSFERASE-RXN
+BOTH  L2R   CITSYN-RXN
+NIL   BOTH  HOMOCYSTEINE-S-METHYLTRANSFERASE-RXN
+NIL   L2R   RXN0-5306
+NIL   L2R   RXN-11867
+NIL   L2R   RXN0-5063
+NIL   L2R   RXN0-6576
+
+swapped-diff-dir: Reactions that swapped sides L2R/R2L with different rxn direction: 0
+
+same-subs-diff-cpds: Reactions with same substrates but different L/R cpds: 0
+
+diff-subs: Same rxn ID but different substrates: 36
+RXN: 3.1.13.5-RXN
+KB-1: L2R    ((tRNA-precursors) (Nucleoside-Monophosphates tRNA-Holder))
+KB-2: L2R    ((tRNA-precursors WATER) (All-tRNAs Nucleoside-Monophosphates))
+
+RXN: RXN0-6528
+KB-1: L2R    ((YHAV-DEGRADATION-SUBSTRATE-MRNA) (ssRNAs))
+KB-2: L2R    ((WATER YHAV-DEGRADATION-SUBSTRATE-MRNA) (ssRNAs))
+
+RXN: RIBOKIN-RXN
+KB-1: L2R    ((ATP CPD-10330) (ADP PROTON RIBOSE-5P))
+KB-2: L2R    ((ATP CPD-10330) (ADP CPD-15318 PROTON))
+
+RXN: RXN0-6525
+KB-1: L2R    ((MUTATED-TRNA) (Nucleoside-Monophosphates))
+KB-2: L2R    ((MUTATED-TRNA WATER) (Nucleoside-Monophosphates))
+
+RXN: 3.1.26.12-RXN
+KB-1: L2R    ((RNASE-E-DEGRADATION-SUBSTRATE-MRNA) (ssRNAs))
+KB-2: L2R    ((RNASE-E-DEGRADATION-SUBSTRATE-MRNA WATER) (ssRNAs))
+
+RXN: RXN0-2942
+KB-1: L2R    ((DNA-With-Recognition-Site) (DNA-Cleaved-Recognition-Site))
+KB-2: L2R    ((DNA-With-Recognition-Site WATER) (DNA-Cleaved-Recognition-Site))
+
+RXN: RXN0-949
+KB-1: L2R    ((Octanoylated-domains S-ADENOSYLMETHIONINE Sulfurated-Sulfur-Acceptors)
+              (CH33ADO Lipoyl-Protein-N6-lipoyllysine MET PROTON Unsulfurated-Sulfur-Acceptors))
+KB-2: L2R    ((Octanoylated-domains S-ADENOSYLMETHIONINE Sulfurated-Sulfur-Acceptors)
+              (CH33ADO Lipoyl-Protein-N6-lipoyllysine MET Unsulfurated-Sulfur-Acceptors))
+
+RXN: RXN0-6522
+KB-1: L2R    ((9S-RRNA) (5S-rRNAs ssRNAs))
+KB-2: L2R    ((9S-RRNA WATER) (5S-rRNAs ssRNAs))
+
+RXN: NMNNUCLEOSID-RXN
+KB-1: L2R    ((NICOTINAMIDE_NUCLEOTIDE WATER) (NIACINAMIDE PROTON RIBOSE-5P))
+KB-2: L2R    ((NICOTINAMIDE_NUCLEOTIDE WATER) (CPD-15317 NIACINAMIDE PROTON))
+
+RXN: TRANS-RXN-158
+KB-1: L2R    ((BETA-D-FRUCTOSE PTSH-PHOSPHORYLATED) (FRU1P PTSH-MONOMER))
+KB-2: L2R    ((BETA-D-FRUCTOSE PTSI-PHOSPHORYLATED) (FRU1P PTSI-MONOMER))
+
+RXN: RXN-12588
+KB-1: NIL    ((CYS PROTON Unsulfurated-Sulfur-Acceptors)
+              (L-ALPHA-ALANINE Sulfurated-Sulfur-Acceptors))
+KB-2: NIL    ((CYS Unsulfurated-Sulfur-Acceptors) (L-ALPHA-ALANINE Sulfurated-Sulfur-Acceptors))
+
+RXN: GLUCOSAMINE-6-P-DEAMIN-RXN
+KB-1: BOTH   ((D-GLUCOSAMINE-6-P WATER) (AMMONIUM FRUCTOSE-6P))
+KB-2: BOTH   ((CPD-13469 WATER) (AMMONIUM FRUCTOSE-6P))
+
+RXN: RHAMNISOM-RXN
+KB-1: BOTH   ((L-rhamnopyranose) (RHAMNULOSE))
+KB-2: BOTH   ((CPD0-1112) (CPD-16566))
+
+RXN: 3.2.1.17-RXN
+KB-1: L2R    ((Peptidoglycans WATER) (C5 N-acetyl-D-glucosamine))
+KB-2: L2R    ((Peptidoglycans WATER) (N-acetyl-D-glucosamine NAcMur-Peptide-Undecaprenols))
+
+RXN: RXN0-6529
+KB-1: L2R    ((YHAV-DEGRADATION-SUBSTRATE-RRNA) (ssRNAs))
+KB-2: L2R    ((WATER YHAV-DEGRADATION-SUBSTRATE-RRNA) (ssRNAs))
+
+RXN: RXN0-5437
+KB-1: NIL    ((rRNA-Holder S-ADENOSYLMETHIONINE)
+              (ADENOSYL-HOMO-CYS N6N6-Dimethyladenine-Containing-rRNAs))
+KB-2: L2R    ((rRNAs S-ADENOSYLMETHIONINE)
+              (ADENOSYL-HOMO-CYS N6N6-Dimethyladenine-Containing-rRNAs))
+
+RXN: RXN0-2621
+KB-1: L2R    ((CPD-8180) (CPD-8534))
+KB-2: L2R    ((CPD-8180 WATER) (CPD-8534))
+
+RXN: RXN0-6526
+KB-1: L2R    ((23S-rRNAs) (ssRNAs))
+KB-2: L2R    ((23S-rRNAs WATER) (ssRNAs))
+
+RXN: RXN0-2605
+KB-1: L2R    ((Double-Stranded-DNAs) (5-phosphooligonucleotides))
+KB-2: L2R    ((Double-Stranded-DNAs WATER) (5-phosphooligonucleotides))
+
+RXN: RXN0-6523
+KB-1: L2R    ((RNASE-G-DEGRADATION-SUBSTRATE-MRNA) (ssRNAs))
+KB-2: L2R    ((RNASE-G-DEGRADATION-SUBSTRATE-MRNA WATER) (ssRNAs))
+
+RXN: RXN0-2584
+KB-1: NIL    ((DNA-with-Uracils WATER) (AP-Site-Created URACIL))
+KB-2: NIL    ((DNA-with-Uracils WATER) (DNA-containing-a-Apyrimidinic-Sites URACIL))
+
+RXN: RXN0-6480
+KB-1: L2R    ((CPD0-2354) (ssRNAs tRNAs))
+KB-2: L2R    ((CPD0-2354 WATER) (ssRNAs tRNAs))
+
+RXN: RHAMNULOKIN-RXN
+KB-1: L2R    ((ATP RHAMNULOSE) (ADP PROTON RHAMNULOSE-1P))
+KB-2: L2R    ((ATP CPD-16567) (ADP PROTON RHAMNULOSE-1P))
+
+RXN: RXN-14712
+KB-1: L2R    ((C6 Peptidoglycans) (Peptidoglycans UNDECAPRENYL-DIPHOSPHATE))
+KB-2: L2R    ((NAcMur-Peptide-NAcGlc-Undecaprenols Peptidoglycans)
+              (Peptidoglycans UNDECAPRENYL-DIPHOSPHATE))
+
+RXN: RXN0-5402
+KB-1: L2R    ((CPD0-1182 CPD0-1183) (CPD0-1185 D-ALANINE))
+KB-2: L2R    ((CPD0-1182 CPD0-1183) (CPD0-1185 D-ALANINE PROTON))
+
+RXN: 2.8.1.6-RXN
+KB-1: L2R    ((DETHIOBIOTIN S-ADENOSYLMETHIONINE Sulfurated-Sulfur-Acceptors)
+              (BIOTIN CH33ADO MET PROTON Unsulfurated-Sulfur-Acceptors))
+KB-2: L2R    ((DETHIOBIOTIN S-ADENOSYLMETHIONINE Sulfurated-Sulfur-Acceptors)
+              (BIOTIN CH33ADO MET Unsulfurated-Sulfur-Acceptors))
+
+RXN: FUCISOM-RXN
+KB-1: BOTH   ((L-Fucopyranoses) (L-FUCULOSE))
+KB-2: BOTH   ((CPD-10329) (L-FUCULOSE))
+
+RXN: AMP-NUCLEOSID-RXN
+KB-1: L2R    ((AMP WATER) (ADENINE RIBOSE-5P))
+KB-2: L2R    ((AMP WATER) (ADENINE CPD-15317))
+
+RXN: 3.1.11.2-RXN
+KB-1: L2R    ((DNA-N) (DNA-N Nucleoside-Monophosphates))
+KB-2: L2R    ((DNA-N WATER) (DNA-N Nucleoside-Monophosphates))
+
+RXN: AMINOCYL-TRNA-HYDROLASE-RXN
+KB-1: L2R    ((N-Substituted-Aminoacyl-tRNA WATER) (N-Substituted-Amino-Acids tRNA-Holder))
+KB-2: L2R    ((N-Substituted-Aminoacyl-tRNA WATER) (All-tRNAs N-Substituted-Amino-Acids PROTON))
+
+RXN: RXN0-6527
+KB-1: NIL    ((rRNA-Holder) (ssRNAs))
+KB-2: NIL    ((rRNAs) (ssRNAs))
+
+RXN: RXN0-6524
+KB-1: L2R    ((RNASE-II-POLY-A-SUBSTRATE-MRNA) (AMP RNASE-II-SUBSTRATE-WITH-NO-POLY-A-TAIL))
+KB-2: L2R    ((RNASE-II-POLY-A-SUBSTRATE-MRNA WATER) (AMP RNASE-II-SUBSTRATE-WITH-NO-POLY-A-TAIL))
+
+RXN: RXN0-2941
+KB-1: L2R    ((DNA-With-Recognition-Site) (Cleaved-DNA))
+KB-2: L2R    ((DNA-With-Recognition-Site WATER) (Cleaved-DNA))
+
+RXN: RXN0-1441
+KB-1: L2R    ((ADENOSINE_DIPHOSPHATE_RIBOSE WATER) (AMP PROTON RIBOSE-5P))
+KB-2: L2R    ((ADENOSINE_DIPHOSPHATE_RIBOSE WATER) (AMP CPD-15317 PROTON))
+
+RXN: RXN0-6521
+KB-1: L2R    ((RNASE-E-MRNA-PROCESSING-SUBSTRATE) (RNASE-E-PROCESSING-PRODUCT-MRNA ssRNAs))
+KB-2: L2R    ((RNASE-E-MRNA-PROCESSING-SUBSTRATE WATER) (RNASE-E-PROCESSING-PRODUCT-MRNA ssRNAs))
+
+RXN: 3.2.2.23-RXN
+KB-1: L2R    ((DNA-containing-diamino-hydro-formamidops WATER) (AP-Site-Created CPD-16491))
+KB-2: L2R    ((DNA-containing-diamino-hydro-formamidops WATER)
+              (CPD-16491 DNA-containing-aPurinic-Sites))
+
+

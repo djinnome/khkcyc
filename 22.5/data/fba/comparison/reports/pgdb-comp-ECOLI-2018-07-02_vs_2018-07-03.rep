@@ -1,0 +1,92 @@
+=========== PGDB comparison report generated on 2018-07-04 using version 201707 ===========
+
+KB-1: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/kb/ecobase.ocelot-2018-07-02_21-00-22
+KB-2: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/kb/ecobase.ocelot
+
+
+Basic reaction stats for KB-1 and KB-2
+--------------------------------------
+Basic reaction stats for ECOLI version 2018-07-02:
+Length all-rxns :all       = 2800
+Length all-rxns :metab-all = 2146
+Length all-rxns :transport = 501
+Number of rxns not included in FBA = 154
+Reactions not included in FBA that are balanced = 0 out of 154
+
+
+Basic reaction stats for ECOLI version 22.1:
+Length all-rxns :all       = 2800
+Length all-rxns :metab-all = 2146
+Length all-rxns :transport = 501
+Number of rxns not included in FBA = 154
+Reactions not included in FBA that are balanced = 0 out of 154
+
+
+Comparison statistics
+---------------------
+Number of unique reactions: KB-1 (2018-07-02) = 0   KB-2 (22.1) = 0
+Number of reactions with same IDs between KB-1 and KB-2 = 2800
+               exact:    2791
+             swapped:       0
+            diff-dir:       0
+    swapped-diff-dir:       0
+ same-subs-diff-cpds:       0
+           diff-subs:       9
+
+
+Unique reactions in KB-1 and KB-2
+---------------------------------
+Unique reactions in KB-1 (2018-07-02): 0
+
+Unique reactions in KB-2 (22.1): 0
+
+Inexact reaction matches between KB-1 and KB-2
+----------------------------------------------
+Note: Format is ((left-cpds) (right-cpds)) whenever cpds are shown.
+
+swapped: Reactions that swapped sides L2R/R2L but are effectively the same: 0
+
+diff-dir: Same reaction but different reaction direction: 0
+
+swapped-diff-dir: Reactions that swapped sides L2R/R2L with different rxn direction: 0
+
+same-subs-diff-cpds: Reactions with same substrates but different L/R cpds: 0
+
+diff-subs: Same rxn ID but different substrates: 9
+RXN: RXN0-6542
+KB-1: L2R    ((ATP PROTEIN-CHEA) (ADP MONOMER0-4206))
+KB-2: L2R    ((ATP CHEA-CPLX) (ADP CPLX0-8274))
+
+RXN: RXN0-6546
+KB-1: L2R    ((CHEY-MONOMER MONOMER0-4206) (PHOSPHO-CHEY PROTEIN-CHEA))
+KB-2: L2R    ((CHEY-MONOMER CPLX0-8274) (CHEA-CPLX PHOSPHO-CHEY))
+
+RXN: RXN0-6466
+KB-1: BOTH   ((CPLX0-7854 TREHALOSE-6P) (CPLX0-8056))
+KB-2: BOTH   ((CPD-15991 CPLX0-7854) (CPLX0-8056))
+
+RXN: R138-RXN
+KB-1: BOTH   ((GALACTOSE PD03028) (MONOMER-52))
+KB-2: BOTH   ((D-Galactose PD03028) (MONOMER-52))
+
+RXN: RXN0-4481
+KB-1: BOTH   ((G6274-MONOMER S-ALLANTOIN) (MONOMER0-2221))
+KB-2: BOTH   ((ALLANTOIN G6274-MONOMER) (MONOMER0-2221))
+
+RXN: RXN0-285
+KB-1: BOTH   ((PD00222 RHAMNOSE) (MONOMER-47))
+KB-2: BOTH   ((L-rhamnose PD00222) (MONOMER-47))
+
+RXN: R139-RXN
+KB-1: BOTH   ((GALACTOSE PD00261) (MONOMER-53))
+KB-2: BOTH   ((D-Galactose PD00261) (MONOMER-53))
+
+RXN: RXN0-286
+KB-1: BOTH   ((PC00086 RHAMNOSE) (CPLX-124))
+KB-2: BOTH   ((L-rhamnose PC00086) (CPLX-124))
+
+RXN: RXN0-6547
+KB-1: L2R    ((CHEB-MONOMER MONOMER0-4206) (PHOSPHO-CHEB PROTEIN-CHEA))
+KB-2: L2R    ((CHEB-MONOMER CPLX0-8274) (CHEA-CPLX PHOSPHO-CHEB))
+
+

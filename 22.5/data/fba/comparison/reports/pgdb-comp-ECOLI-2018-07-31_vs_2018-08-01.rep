@@ -1,0 +1,82 @@
+=========== PGDB comparison report generated on 2018-08-02 using version 201707 ===========
+
+KB-1: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/kb/ecobase.ocelot-2018-07-31_21-00-23
+KB-2: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/kb/ecobase.ocelot
+
+
+Basic reaction stats for KB-1 and KB-2
+--------------------------------------
+Basic reaction stats for ECOLI version 2018-07-31:
+Length all-rxns :all       = 2809
+Length all-rxns :metab-all = 2152
+Length all-rxns :transport = 504
+Number of rxns not included in FBA = 154
+Reactions not included in FBA that are balanced = 0 out of 154
+
+
+Basic reaction stats for ECOLI version 22.1:
+Length all-rxns :all       = 2808
+Length all-rxns :metab-all = 2151
+Length all-rxns :transport = 504
+Number of rxns not included in FBA = 154
+Reactions not included in FBA that are balanced = 0 out of 154
+
+
+Comparison statistics
+---------------------
+Number of unique reactions: KB-1 (2018-07-31) = 2   KB-2 (22.1) = 1
+Number of reactions with same IDs between KB-1 and KB-2 = 2807
+               exact:    2804
+             swapped:       0
+            diff-dir:       0
+    swapped-diff-dir:       0
+ same-subs-diff-cpds:       0
+           diff-subs:       3
+
+
+Unique reactions in KB-1 and KB-2
+---------------------------------
+Unique reactions in KB-1 (2018-07-31): 2
+BOTH  PHEAMINOTRANS-RXN
+L2R   RXN-19925
+
+Unique reactions in KB-2 (22.1): 1
+BOTH  RXN-10814
+
+Inexact reaction matches between KB-1 and KB-2
+----------------------------------------------
+Note: Format is ((left-cpds) (right-cpds)) whenever cpds are shown.
+
+swapped: Reactions that swapped sides L2R/R2L but are effectively the same: 0
+
+diff-dir: Same reaction but different reaction direction: 0
+
+swapped-diff-dir: Reactions that swapped sides L2R/R2L with different rxn direction: 0
+
+same-subs-diff-cpds: Reactions with same substrates but different L/R cpds: 0
+
+diff-subs: Same rxn ID but different substrates: 3
+RXN: RXN0-5361
+KB-1: L2R    ((RNA-Holder WATER)
+              (23-cyclic-nucloetide-PO4 3-phosphooligoribonucleotides))
+KB-2: L2R    ((RNA-Holder WATER)
+              (23-cyclic-nucloetide-PO4
+               3-Prime-Phosphate-Terminated-RNAs))
+
+RXN: 3.1.27.5-RXN
+KB-1: L2R    ((RNA-Holder WATER)
+              (3-phosphooligoribonucleotides 5Prime-OH-Terminated-RNAs
+               PROTON))
+KB-2: L2R    ((RNA-Holder WATER)
+              (3-Prime-Phosphate-Terminated-RNAs
+               5Prime-OH-Terminated-RNAs PROTON))
+
+RXN: RXN-19924
+KB-1: L2R    ((RNA-Holder)
+              (5Prime-OH-Terminated-RNAs
+               RNA-23-Cyclic-Nucloetide-Phosphate))
+KB-2: L2R    ((RNA-Holder)
+              (5Prime-OH-Terminated-RNAs
+               Cyclic-Phosphate-Terminated-RNAs))
+
+

@@ -1,0 +1,197 @@
+=========== PGDB comparison report generated on 2018-08-03 using version 201707 ===========
+
+KB-1: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/kb/ecobase.ocelot-2018-08-01_21-00-23
+KB-2: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/kb/ecobase.ocelot
+
+
+Basic reaction stats for KB-1 and KB-2
+--------------------------------------
+Basic reaction stats for ECOLI version 2018-08-01:
+Length all-rxns :all       = 2808
+Length all-rxns :metab-all = 2151
+Length all-rxns :transport = 504
+Number of rxns not included in FBA = 154
+Reactions not included in FBA that are balanced = 0 out of 154
+
+
+Basic reaction stats for ECOLI version 22.1:
+Length all-rxns :all       = 2810
+Length all-rxns :metab-all = 2153
+Length all-rxns :transport = 504
+Number of rxns not included in FBA = 154
+Reactions not included in FBA that are balanced = 0 out of 154
+
+
+Comparison statistics
+---------------------
+Number of unique reactions: KB-1 (2018-08-01) = 2   KB-2 (22.1) = 4
+Number of reactions with same IDs between KB-1 and KB-2 = 2806
+               exact:    2776
+             swapped:       9
+            diff-dir:       3
+    swapped-diff-dir:       0
+ same-subs-diff-cpds:       0
+           diff-subs:      18
+
+
+Unique reactions in KB-1 and KB-2
+---------------------------------
+Unique reactions in KB-1 (2018-08-01): 2
+L2R   RXN-5841
+NIL   HYDROXYPHENYLPYRUVATE-REDUCTASE-RXN
+
+Unique reactions in KB-2 (22.1): 4
+BOTH  RXN-19921
+L2R   RXN-19919
+BOTH  MALATE-DEHYDROGENASE-NADP+-RXN
+L2R   RXN-19920
+
+Inexact reaction matches between KB-1 and KB-2
+----------------------------------------------
+Note: Format is ((left-cpds) (right-cpds)) whenever cpds are shown.
+
+swapped: Reactions that swapped sides L2R/R2L but are effectively the same: 9
+RXN: RXN-17783
+KB-1: R2L    ((CPD0-1162 ETF-Reduced) (CPD-15436 ETF-Oxidized PROTON))
+KB-2: L2R    ((CPD-15436 ETF-Oxidized PROTON) (CPD0-1162 ETF-Reduced))
+
+RXN: RXN-17796
+KB-1: R2L    ((CPD-19150 ETF-Reduced) (CPD-19148 ETF-Oxidized PROTON))
+KB-2: L2R    ((CPD-19148 ETF-Oxidized PROTON) (CPD-19150 ETF-Reduced))
+
+RXN: RXN-17784
+KB-1: R2L    ((CPD-19163 ETF-Reduced) (CPD-18346 ETF-Oxidized PROTON))
+KB-2: L2R    ((CPD-18346 ETF-Oxidized PROTON) (CPD-19163 ETF-Reduced))
+
+RXN: RXN-10814
+KB-1: BOTH   ((GLT PHENYL-PYRUVATE) (2-KETOGLUTARATE PHE))
+KB-2: BOTH   ((2-KETOGLUTARATE PHE) (GLT PHENYL-PYRUVATE))
+
+RXN: RXN-17775
+KB-1: R2L    ((CPD-19172 ETF-Reduced) (ETF-Oxidized OLEOYL-COA PROTON))
+KB-2: L2R    ((ETF-Oxidized OLEOYL-COA PROTON) (CPD-19172 ETF-Reduced))
+
+RXN: RXN-17788
+KB-1: R2L    ((CPD-19162 ETF-Reduced) (CPD-10269 ETF-Oxidized PROTON))
+KB-2: L2R    ((CPD-10269 ETF-Oxidized PROTON) (CPD-19162 ETF-Reduced))
+
+RXN: RXN-17779
+KB-1: R2L    ((CPD-19170 ETF-Reduced) (CPD-19144 ETF-Oxidized PROTON))
+KB-2: L2R    ((CPD-19144 ETF-Oxidized PROTON) (CPD-19170 ETF-Reduced))
+
+RXN: ATPSYN-RXN
+KB-1: BOTH   ((ADP Pi PROTON) (ATP PROTON WATER))
+KB-2: BOTH   ((ATP PROTON WATER) (ADP Pi PROTON))
+
+RXN: RXN-17792
+KB-1: R2L    ((CPD-19161 ETF-Reduced) (CPD-19147 ETF-Oxidized PROTON))
+KB-2: L2R    ((CPD-19147 ETF-Oxidized PROTON) (CPD-19161 ETF-Reduced))
+
+
+diff-dir: Same reaction but different reaction direction: 3
+KB-1  KB-2  RXN-ID
+L2R   BOTH  RXN-9590
+NIL   L2R   RXN0-1138
+NIL   R2L   FERREDOXIN--NAD+-REDUCTASE-RXN
+
+swapped-diff-dir: Reactions that swapped sides L2R/R2L with different rxn direction: 0
+
+same-subs-diff-cpds: Reactions with same substrates but different L/R cpds: 0
+
+diff-subs: Same rxn ID but different substrates: 18
+RXN: RXN0-1842
+KB-1: L2R    ((CPD-17523 Lipid-A)
+              (2-Acylglycero-Phosphocholines HEPTA-ACYLATED-LIPID-A))
+KB-2: L2R    ((CPD-17523 CPD0-1283)
+              (2-Acylglycero-Phosphocholines HEPTA-ACYLATED-LIPID-A))
+
+RXN: RXN-14363
+KB-1: L2R    ((CPD0-939 L-1-PHOSPHATIDYL-ETHANOLAMINE)
+              (CPD-15238 DIACYLGLYCEROL))
+KB-2: L2R    ((CPD0-939 L-1-PHOSPHATIDYL-ETHANOLAMINE PROTON)
+              (CPD-15238 DIACYLGLYCEROL))
+
+RXN: 3.4.11.18-RXN
+KB-1: L2R    ((Protein-With-N-Terminal-Met WATER)
+              (MET Peptides-holder PROTON))
+KB-2: L2R    ((Protein-With-N-Terminal-Met WATER)
+              (MET Peptide-Holder-Alternative))
+
+RXN: RXN-7632
+KB-1: NIL    ((34-DIHYDROXYPHENYLPYRUVATE NADPH PROTON) (CPD-6982 NADP))
+KB-2: R2L    ((CPD-6982 NAD-P-OR-NOP)
+              (34-DIHYDROXYPHENYLPYRUVATE NADH-P-OR-NOP PROTON))
+
+RXN: RXN0-5051
+KB-1: L2R    ((General-Protein-Substrates WATER)
+              (Amino-Acids-20 Peptides-holder))
+KB-2: L2R    ((Exoaminopeptidase-Substrates WATER)
+              (Amino-Acids-20 Peptides-holder PROTON))
+
+RXN: RXN0-6938
+KB-1: L2R    ((FERRIC-ENTEROBACTIN-COMPLEX WATER) (CPD0-2482))
+KB-2: L2R    ((FERRIC-ENTEROBACTIN-COMPLEX WATER) (CPD0-2482 PROTON))
+
+RXN: RXN-14379
+KB-1: L2R    ((CPD0-939 L-1-PHOSPHATIDYL-ETHANOLAMINE)
+              (CPD-15242 DIACYLGLYCEROL))
+KB-2: L2R    ((CPD0-939 L-1-PHOSPHATIDYL-ETHANOLAMINE PROTON)
+              (CPD-15242 DIACYLGLYCEROL))
+
+RXN: 3.4.11.2-RXN
+KB-1: L2R    ((Peptide-with-N-terminal-Alanine WATER)
+              (L-ALPHA-ALANINE Peptides-holder PROTON))
+KB-2: L2R    ((Peptide-with-N-terminal-Alanine WATER)
+              (L-ALPHA-ALANINE Peptide-Holder-Alternative))
+
+RXN: RXN0-7154
+KB-1: L2R    ((CPD0-2582 NADPH) (CPD-16716 NADP))
+KB-2: R2L    ((CPD-16716 NADP) (CPD0-2582 NADPH PROTON))
+
+RXN: RXN0-5052
+KB-1: L2R    ((General-Protein-Substrates WATER)
+              (Amino-Acids-20 Peptides-holder))
+KB-2: L2R    ((Aminopeptidase-Substrates WATER)
+              (Amino-Acids-20 Peptides-holder PROTON))
+
+RXN: RXN0-3182
+KB-1: L2R    ((POLYPEPTIDE WATER) (POLYPEPTIDE))
+KB-2: L2R    ((General-Protein-Substrates WATER)
+              (Peptides-holder PROTON))
+
+RXN: RXN-11135
+KB-1: L2R    ((ATP Double-helix-DNA WATER) (ADP Pi PROTON Unwound-DNA))
+KB-2: L2R    ((ATP Supercoiled-Duplex-DNAs WATER)
+              (ADP Pi PROTON Single-Stranded-DNAs))
+
+RXN: 3.4.15.5-RXN
+KB-1: L2R    ((OLIGOPEPTIDES WATER) (DIPEPTIDES Peptides-holder))
+KB-2: L2R    ((Peptidyl-Dipeptidase-Dcp-Substrates WATER)
+              (DIPEPTIDES Peptides-holder))
+
+RXN: RXN0-5204
+KB-1: L2R    ((General-Protein-Substrates WATER)
+              (Amino-Acids-20 Peptides-holder))
+KB-2: L2R    ((PepB-Aminopeptidase-Substrates WATER)
+              (Amino-Acids-20 Peptides-holder PROTON))
+
+RXN: RXN-19407
+KB-1: L2R    ((CPD-602 WATER) (CPD-16551 CPD-20969))
+KB-2: L2R    ((CPD-602 WATER) (CPD-15317 CPD-20969))
+
+RXN: RXN0-5195
+KB-1: L2R    ((POLYPEPTIDE WATER) (POLYPEPTIDE))
+KB-2: L2R    ((General-Protein-Substrates WATER)
+              (Peptides-holder PROTON))
+
+RXN: RXN0-3261
+KB-1: L2R    ((Protein-N-terminal-L-Arginine WATER)
+              (ARG General-Protein-Substrates PROTON))
+KB-2: L2R    ((Proteins-with-N-terminal-L-arginine WATER)
+              (ARG Peptide-Holder-Alternative))
+
+RXN: RXN-14361
+KB-1: L2R    ((CPD0-934 UDP-GLUCURONATE) (CPD-15237 UDP))
+KB-2: L2R    ((CPD0-934 UDP-GLUCURONATE) (CPD-15237 PROTON UDP))
+
+

@@ -1,0 +1,80 @@
+=========== PGDB comparison report generated on 2018-06-07 using version 201707 ===========
+
+KB-1: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/kb/ecobase.ocelot-2018-06-05_21-00-26
+KB-2: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/kb/ecobase.ocelot
+
+
+Basic reaction stats for KB-1 and KB-2
+--------------------------------------
+Basic reaction stats for ECOLI version 2018-06-05:
+Length all-rxns :all       = 2792
+Length all-rxns :metab-all = 2135
+Length all-rxns :transport = 501
+Number of rxns not included in FBA = 157
+Reactions not included in FBA that are balanced = 0 out of 157
+
+
+Basic reaction stats for ECOLI version 22.1:
+Length all-rxns :all       = 2792
+Length all-rxns :metab-all = 2135
+Length all-rxns :transport = 501
+Number of rxns not included in FBA = 157
+Reactions not included in FBA that are balanced = 0 out of 157
+
+
+Comparison statistics
+---------------------
+Number of unique reactions: KB-1 (2018-06-05) = 0   KB-2 (22.1) = 0
+Number of reactions with same IDs between KB-1 and KB-2 = 2792
+               exact:    2786
+             swapped:       0
+            diff-dir:       0
+    swapped-diff-dir:       0
+ same-subs-diff-cpds:       0
+           diff-subs:       6
+
+
+Unique reactions in KB-1 and KB-2
+---------------------------------
+Unique reactions in KB-1 (2018-06-05): 0
+
+Unique reactions in KB-2 (22.1): 0
+
+Inexact reaction matches between KB-1 and KB-2
+----------------------------------------------
+Note: Format is ((left-cpds) (right-cpds)) whenever cpds are shown.
+
+swapped: Reactions that swapped sides L2R/R2L but are effectively the same: 0
+
+diff-dir: Same reaction but different reaction direction: 0
+
+swapped-diff-dir: Reactions that swapped sides L2R/R2L with different rxn direction: 0
+
+same-subs-diff-cpds: Reactions with same substrates but different L/R cpds: 0
+
+diff-subs: Same rxn ID but different substrates: 6
+RXN: NARLQ-RXN
+KB-1: L2R    ((NARL-MONOMER PHOSPHO-NARQ) (NARQ-MONOMER PHOSPHO-NARL))
+KB-2: L2R    ((NARL-MONOMER PHOSPHO-NARQ) (NARQ-CPLX PHOSPHO-NARL))
+
+RXN: NARQ-RXN
+KB-1: L2R    ((ATP NARQ-MONOMER) (ADP PHOSPHO-NARQ))
+KB-2: L2R    ((ATP NARQ-CPLX) (ADP PHOSPHO-NARQ))
+
+RXN: NARLX-RXN
+KB-1: L2R    ((NARL-MONOMER PHOSPHO-NARX) (NARX-MONOMER PHOSPHO-NARL))
+KB-2: L2R    ((NARL-MONOMER PHOSPHO-NARX) (NARX-CPLX PHOSPHO-NARL))
+
+RXN: NARX-RXN
+KB-1: L2R    ((ATP NARX-MONOMER) (ADP PHOSPHO-NARX))
+KB-2: L2R    ((ATP NARX-CPLX) (ADP PHOSPHO-NARX))
+
+RXN: NARPQ-RXN
+KB-1: L2R    ((NARP-MONOMER PHOSPHO-NARQ) (NARQ-MONOMER PHOSPHO-NARP))
+KB-2: L2R    ((NARP-MONOMER PHOSPHO-NARQ) (NARQ-CPLX PHOSPHO-NARP))
+
+RXN: NARPX-RXN
+KB-1: L2R    ((NARP-MONOMER PHOSPHO-NARX) (NARX-MONOMER PHOSPHO-NARP))
+KB-2: L2R    ((NARP-MONOMER PHOSPHO-NARX) (NARX-CPLX PHOSPHO-NARP))
+
+

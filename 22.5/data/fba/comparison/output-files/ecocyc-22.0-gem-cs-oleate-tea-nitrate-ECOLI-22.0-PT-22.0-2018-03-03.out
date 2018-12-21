@@ -1,0 +1,9 @@
+;; FBA output file generated on 03-Mar-2018  01:53:03 using version 201707
+;; FBA file used: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.0/data/fba/fba-examples/ecocyc-22.0-gem-cs-oleate-tea-nitrate.fba
+;; Pathway Tools version used: 22.0
+;; ECOLI PGDB version used: 22.0
+
+
+(NIL
+ ("Error, in parameter 'remove-reactions:', the reaction or pathway 'TRANS-RXN-139' could not be found in the PGDB."
+  "Error, in parameter 'remove-reactions:', the reaction or pathway 'TRANS-RXN0-567' could not be found in the PGDB."))

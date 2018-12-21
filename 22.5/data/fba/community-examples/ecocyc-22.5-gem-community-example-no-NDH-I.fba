@@ -1,0 +1,339 @@
+# ----------------------------------------------------------------------
+# EcoCyc v22.5 FBA
+#
+# Major revision history:
+# 18.0 - initial publication
+# 19.5 - revision of phospholipid composition and biomass function
+#      - exchange with extracellular space
+#      - addition of cobrapy-compatible JSON output
+# 20.0 - major transport update
+#      -- weak acid-proton cotransport revised
+#      -- nutrient uptake greatly expanded and updated
+#      -- use of many phosphorylated compounds as
+#         phosphorous sources
+#      - major metabolic update
+#      -- expanded catabolism covering mono-, di-, and many
+#         polysaccharides; sugar alcohols; aldonates; 
+#         amino acids; saturated and unsaturated fatty
+#         acid beta-oxidation; 
+#      -- expanded anabolism focusing on small molecules involved in 
+#         macromolecular complexation and modification
+#      -- expanded respiratory substrates to cover anaerobic respiration 
+#      -- ambiguous reaction directions positively specified to remove
+#         reaction inference effects and specify physiological role in
+#         E. coli
+# 21.0 - Minor: added two reactions (PYFLAVOXRE-RXN and RXN-17897) to the
+#        "remove-reactions" set to prevent incorrect flux cycling 
+# 22.0 - reaction direction inference updated to prioritize enzrxn direction
+#      - Minor: added one reaction (RXN0-5256) to the "remove-reactions"
+#        set to prevent incorrect flux cycling
+#      - Removed reactions from the "remove-reactions" set that no longer
+#        exist, are no longer problematic, or are unnecessary
+# 22.5 - No changes
+#
+# For details of the 18.0 revision, discussion of essentiality,
+# and citation information see Weaver et al. 2014, PMID 24974895.
+# Details of 19.5-20.0 revisions are in preparation.
+# 
+# Overall biomass composition from 0.3 hr^-1 growth in 
+# "Quantitative analysis of relationships between fluxome and
+# metabolome in Escherichia coli" PhD thesis, Dr. Hilal Taymaz-Nikerel 
+# 2010
+# 
+# Amino acid compositions from Pramanik & Keasling 1997, PMID 18642243.
+# Lipid compositions from Oursel et al. 2007, PMID 17477452
+# RNA/DNA/other molecule compositions from Feist et al 2007, PMID 
+# 17593909, Orth et al PMID 21988831, and Neidhardt et al. 1996.
+#
+# Contributors: Dan Weaver, Wai Kit Ong
+# ----------------------------------------------------------------------
+
+pgdb: ecoli
+minimize-fluxes: yes
+log-file: yes
+json-file: yes
+
+reactions:
+metab-all
+transport-all
+
+
+remove-reactions:
+### NDH-I example
+NADH-DEHYDROG-A-RXN
+RXN0-5388
+
+RXN0-5256		## removed in 22.0
+
+PYFLAVOXRE-RXN		## removed in 21.0
+RXN-17897		## removed in 21.0
+
+RXN0-2945
+TRANS-RXN0-574
+TRANS-RXN-300
+ACECOATRANS-RXN
+
+
+biomass:
+:group PK-PROT-0.3
+L-ALPHA-ALANINE[CCO-CYTOSOL]            0.673865  ## L-alanine
+ARG[CCO-CYTOSOL]                        0.299496  ## L-arginine
+L-ASPARTATE[CCO-CYTOSOL]                0.318214  ## L-aspartate
+ASN[CCO-CYTOSOL]                        0.318214  ## L-asparagine
+CYS[CCO-CYTOSOL]                        0.106071  ## L-cysteine
+GLT[CCO-CYTOSOL]                        0.361891  ## L-glutamate
+GLN[CCO-CYTOSOL]                        0.361891  ## L-glutamine
+GLY[CCO-CYTOSOL]                        0.524117  ## glycine
+HIS[CCO-CYTOSOL]                        0.106071  ## L-histidine
+ILE[CCO-CYTOSOL]                        0.293256  ## L-isoleucine
+LEU[CCO-CYTOSOL]                        0.330693  ## L-leucine
+LYS[CCO-CYTOSOL]                        0.361891  ## L-lysine
+MET[CCO-CYTOSOL]                        0.155987  ## L-methionine
+PHE[CCO-CYTOSOL]                        0.212143  ## L-phenylalanine
+PRO[CCO-CYTOSOL]                        0.255819  ## L-proline
+SER[CCO-CYTOSOL]                        0.299496  ## L-serine
+THR[CCO-CYTOSOL]                        0.324454  ## L-threonine
+TRP[CCO-CYTOSOL]                        0.068634  ## L-tryptophan
+TYR[CCO-CYTOSOL]                        0.174706  ## L-tyrosine
+VAL[CCO-CYTOSOL]                        0.449244  ## L-valine
+:end-group
+
+:group RNA
+CTP[CCO-CYTOSOL]                        0.080724  ## CTP
+GTP[CCO-CYTOSOL]                        0.129966  ## GTP
+UTP[CCO-CYTOSOL]                        0.087182  ## UTP
+ATP[CCO-CYTOSOL]                        0.105749  ## ATP
+:end-group
+
+:group DNA
+DCTP[CCO-CYTOSOL]                       0.016329  ## dCTP
+DGTP[CCO-CYTOSOL]                       0.016329  ## dGTP
+TTP[CCO-CYTOSOL]                        0.015819  ## dTTP
+DATP[CCO-CYTOSOL]                       0.015819  ## dATP
+:end-group
+
+:group LIPID-PE
+CPD-17087[CCO-CYTOSOL]                  0.000402  ## 1,2-dimyristoyl-phosphatidyl-ethanolamine
+CPD-18403[CCO-CYTOSOL]                  0.001881  ## phosphatidylethanolamine (1-myristoyl, 2-palmitoleoyl)
+CPD-18404[CCO-CYTOSOL]                  0.002978  ## phosphatidylethanolamine (1-myristoyl, 2-cis-9,10-methylene hexadecanoyl)
+CPD-18367[CCO-CYTOSOL]                  0.018004  ## phosphatidylethanolamine (1-palmitoyl, 2-palmitoleoyl)
+CPD-12819[CCO-CYTOSOL]                  0.005762  ## 1,2-dipalmitoyl-phosphatidyl-ethanolamine
+CPD-18371[CCO-CYTOSOL]                  0.039762  ## phosphatidylethanolamine (1-palmitoyl, 2-cis-9,10-methylene hexadecanoyl)
+CPD-18368[CCO-CYTOSOL]                  0.011734  ## phosphatidylethanolamine (1-cis-vaccenoyl, 2-palmitoleoyl)
+CPD-18369[CCO-CYTOSOL]                  0.016283  ## phosphatidylethanolamine (1-palmitoyl, 2-cis-vaccenoyl)
+CPD-18372[CCO-CYTOSOL]                  0.006382  ## phosphatidylethanolamine (1-palmitoyl, 2-lactobacilloyl)
+CPD-18370[CCO-CYTOSOL]                  0.007690  ## phosphatidylethanolamine (1,2-dicis-vaccenoyl)
+:end-group
+
+:group LIPID-PG
+CPD-18392[CCO-CYTOSOL]                  0.000651  ## phosphatidylglycerol (1-myristoyl, 2-palmitoleoyl)
+CPD-18393[CCO-CYTOSOL]                  0.001444  ## phosphatidylglycerol (1-palmitoyl, 2-myristoyl)
+CPD-18405[CCO-CYTOSOL]                  0.000885  ## phosphatidylglycerol (1-myristoyl, 2-cis-9,10-methylene hexadecanoyl)
+CPD-18361[CCO-CYTOSOL]                  0.008956  ## phosphatidylglycerol (1-palmitoyl, 2-palmitoleoyl)
+CPD-18373[CCO-CYTOSOL]                  0.009829  ## phosphatidylglycerol (1-palmitoyl, 2-cis-9,10-methylene hexadecanoyl)
+CPD-18394[CCO-CYTOSOL]                  0.003274  ## phosphatidylglycerol (1-cis-vaccenoyl, 2-palmitoleoyl)
+CPD-18362[CCO-CYTOSOL]                  0.007531  ## phosphatidylglycerol (1-palmitoyl, 2-cis-vaccenoyl)
+CPD-18406[CCO-CYTOSOL]                  0.002663  ## phosphatidylglycerol (1-palmitoyl, 2-lactobacilloyl)
+CPD-18396[CCO-CYTOSOL]                  0.002785  ## phosphatidylglycerol (1,2-dicis-vaccenoyl)
+:end-group
+
+:group LIPID-CL
+CPD-12824[CCO-CYTOSOL]                  0.004142  ## cardiolipin (tetrahexadecanoyl, n-C16:0)
+:end-group
+
+:group LIPOPOLYSACCHARIDE
+CPD0-939[CCO-CYTOSOL]                   0.001708  ## lipid A-core
+:end-group
+
+:group POLYSACCHARIDE
+ADP-D-GLUCOSE[CCO-CYTOSOL]              0.004800  ## ADP-alpha-D-glucose
+ADP[CCO-CYTOSOL]                        -0.004800  ## ADP
+:end-group
+
+:group PEPTIDOGLYCAN
+C6[CCO-CYTOSOL]                         0.002505  ## ditrans,octacis-undecaprenyldiphospho-N-acetyl-(N-acetylglucosaminyl)muramoyl-L-alanyl-gamma-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine
+:end-group
+
+:group POLYAMINE
+PUTRESCINE[CCO-CYTOSOL]                 0.021114  ## putrescine
+SPERMIDINE[CCO-CYTOSOL]                 0.006719  ## spermidine
+:end-group
+
+:group GAM
+ATP[CCO-CYTOSOL]                        60.000000  ## ATP
+WATER[CCO-CYTOSOL]                      60.000000  ## H2O
+ADP[CCO-CYTOSOL]                        -60.000000  ## ADP
+Pi[CCO-CYTOSOL]                         -60.000000  ## phosphate
+PROTON[CCO-CYTOSOL]                     -60.000000  ## H+
+:end-group
+
+:group FOLATES
+10-FORMYL-THF[CCO-CYTOSOL]              0.000100  ## 10-formyl-tetrahydrofolate mono-L-glutamate
+5-METHYL-THF[CCO-CYTOSOL]               0.000100  ## N5-methyl-tetrahydropteroyl mono-L-glutamate
+METHYLENE-THF[CCO-CYTOSOL]              0.000100  ## 5,10-methylenetetrahydropteroyl mono-L-glutamate
+THF[CCO-CYTOSOL]                        0.000100  ## tetrahydropteroyl mono-L-glutamate
+:end-group
+
+:group FLAVINS
+RIBOFLAVIN[CCO-CYTOSOL]                 0.000100  ## riboflavin
+FAD[CCO-CYTOSOL]                        0.000100  ## FAD
+FMN[CCO-CYTOSOL]                        0.000100  ## FMN
+:end-group
+
+:group MENAQUINOLS
+CPD-12115[CCO-CYTOSOL]                  0.000100  ## demethylmenaquinol-8
+REDUCED-MENAQUINONE[CCO-CYTOSOL]        0.000100  ## menaquinol-8
+:end-group
+
+:group COA-AND-FRIENDS
+CO-A[CCO-CYTOSOL]                       0.000100  ## coenzyme A
+MALONYL-COA[CCO-CYTOSOL]                0.000100  ## malonyl-CoA
+SUC-COA[CCO-CYTOSOL]                    0.000100  ## succinyl-CoA
+ACETYL-COA[CCO-CYTOSOL]                 0.000100  ## acetyl-CoA
+:end-group
+
+:group NAD-NADPS
+NADH[CCO-CYTOSOL]                       0.000100  ## NADH
+NAD[CCO-CYTOSOL]                        0.000100  ## NAD+
+NADPH[CCO-CYTOSOL]                      0.000100  ## NADPH
+NADP[CCO-CYTOSOL]                       0.000100  ## NADP+
+:end-group
+
+:group ENZYME-COFACTORS
+BIOTIN[CCO-CYTOSOL]                     0.000100  ## biotin
+THIAMINE-PYROPHOSPHATE[CCO-CYTOSOL]     0.000100  ## thiamine diphosphate
+CPD-4[CCO-CYTOSOL]                      0.000100  ## molybdopterin
+S-ADENOSYLMETHIONINE[CCO-CYTOSOL]       0.000100  ## S-adenosyl-L-methionine
+:end-group
+
+:group HEMES
+CPD-17063[CCO-CYTOSOL]                  0.000100  ## ferroheme o
+PROTOHEME[CCO-CYTOSOL]                  0.000100  ## ferroheme b
+SIROHEME[CCO-CYTOSOL]                   0.000100  ## siroheme
+:end-group
+
+:group SOLUBLES
+CHORISMATE[CCO-CYTOSOL]                 0.000100  ## chorismate
+GLUTATHIONE[CCO-CYTOSOL]                0.000100  ## glutathione
+UNDECAPRENYL-DIPHOSPHATE[CCO-CYTOSOL]   0.000100  ## di-trans,octa-cis-undecaprenyl diphosphate
+:end-group
+
+:group IRON-UPTAKE
+ENTEROBACTIN[CCO-CYTOSOL]               0.000100  ## enterobactin
+:end-group
+
+
+
+nutrients:
+## NON-GROWTH-ASSOCIATED-MAINTENANCE-CONSTRAINT ##
+ADP[CCO-CYTOSOL]                                             :lower-bound 3.15   :upper-bound 3.15 ## ADP
+Pi[CCO-CYTOSOL]                                              :lower-bound 3.15   :upper-bound 3.15 ## phosphate
+PROTON[CCO-CYTOSOL]                                          :lower-bound 3.15   :upper-bound 3.15 ## H+
+
+## DESIRED-NUTRIENTS ##
+GLC[CCO-EXTRACELLULAR]                                       :lower-bound 0.0    :upper-bound 10.0 ## beta-D-glucopyranose
+OXYGEN-MOLECULE[CCO-EXTRACELLULAR]                            ## oxygen
+AMMONIUM[CCO-EXTRACELLULAR]                                   ## ammonium
+SULFATE[CCO-EXTRACELLULAR]                                    ## sulfate
+Pi[CCO-EXTRACELLULAR]                                         ## phosphate
+FE+2[CCO-EXTRACELLULAR]                                       ## Fe2+
+CA+2[CCO-EXTRACELLULAR]                                       ## Ca2+
+CL-[CCO-EXTRACELLULAR]                                        ## chloride
+CO+2[CCO-EXTRACELLULAR]                                       ## Co2+
+MG+2[CCO-EXTRACELLULAR]                                       ## Mg2+
+MN+2[CCO-EXTRACELLULAR]                                       ## Mn2+
+NI+2[CCO-EXTRACELLULAR]                                       ## Ni2+
+ZN+2[CCO-EXTRACELLULAR]                                       ## Zn2+
+NA+[CCO-EXTRACELLULAR]                                        ## Na+
+CARBON-DIOXIDE[CCO-EXTRACELLULAR]                             ## CO2
+WATER[CCO-EXTRACELLULAR]                                      ## H2O
+PROTON[CCO-EXTRACELLULAR]                                     ## H+
+CPD0-1958[CCO-EXTRACELLULAR]                                  ## 3-(N-morpholino)propanesulfonate
+
+## INORGANIC-COMPOUNDS ##
+## HS[CCO-EXTRACELLULAR]                                         ## hydrogen sulfide
+## NITROUS-OXIDE[CCO-EXTRACELLULAR]                              ## nitrous oxide
+## NITRIC-OXIDE[CCO-EXTRACELLULAR]                               ## nitric oxide
+## NITRITE[CCO-EXTRACELLULAR]                                    ## nitrite
+## NITRATE[CCO-EXTRACELLULAR]                                    ## nitrate
+## HYDROGEN-MOLECULE[CCO-EXTRACELLULAR]                          ## H2
+
+
+
+secretions:
+## NON-GROWTH-ASSOCIATED-MAINTENANCE-CONSTRAINT ##
+ATP[CCO-CYTOSOL]                                             :lower-bound 3.15   :upper-bound 3.15 ## ATP
+WATER[CCO-CYTOSOL]                                           :lower-bound 3.15   :upper-bound 3.15 ## H2O
+
+## MEDIA-COMPONENTS ##
+CPD0-1958[CCO-EXTRACELLULAR]                                  ## 3-(N-morpholino)propanesulfonate
+PROTON[CCO-EXTRACELLULAR]                                     ## H+
+WATER[CCO-EXTRACELLULAR]                                      ## H2O
+CARBON-DIOXIDE[CCO-EXTRACELLULAR]                             ## CO2
+
+## INORGANIC-COMPOUNDS ##
+Pi[CCO-EXTRACELLULAR]                                         ## phosphate
+HS[CCO-EXTRACELLULAR]                                         ## hydrogen sulfide
+SULFATE[CCO-EXTRACELLULAR]                                    ## sulfate
+NITROUS-OXIDE[CCO-EXTRACELLULAR]                              ## nitrous oxide
+NITRIC-OXIDE[CCO-EXTRACELLULAR]                               ## nitric oxide
+NITRITE[CCO-EXTRACELLULAR]                                    ## nitrite
+NITRATE[CCO-EXTRACELLULAR]                                    ## nitrate
+AMMONIUM[CCO-EXTRACELLULAR]                                   ## ammonium
+HYDROGEN-MOLECULE[CCO-EXTRACELLULAR]                          ## H2
+OXYGEN-MOLECULE[CCO-EXTRACELLULAR]                            ## oxygen
+
+## ORGANIC-AND-FATTY-ACIDS ##
+CPD-9247[CCO-EXTRACELLULAR]                                   ## cis-vaccenate
+CPD-9245[CCO-EXTRACELLULAR]                                   ## palmitoleate
+OLEATE-CPD[CCO-EXTRACELLULAR]                                 ## oleate
+STEARIC_ACID[CCO-EXTRACELLULAR]                               ## stearate
+CPD-7836[CCO-EXTRACELLULAR]                                   ## myristate
+PALMITATE[CCO-EXTRACELLULAR]                                  ## palmitate
+CPD-3617[CCO-EXTRACELLULAR]                                   ## decanoate
+FUM[CCO-EXTRACELLULAR]                                        ## fumarate
+MAL[CCO-EXTRACELLULAR]                                        ## (S)-malate
+PYRUVATE[CCO-EXTRACELLULAR]                                   ## pyruvate
+D-LACTATE[CCO-EXTRACELLULAR]                                  ## (R)-lactate
+SUC[CCO-EXTRACELLULAR]                                        ## succinate
+ETOH[CCO-EXTRACELLULAR]                                       ## ethanol
+ACET[CCO-EXTRACELLULAR]                                       ## acetate
+FORMATE[CCO-EXTRACELLULAR]                                    ## formate
+
+## POLYAMINES ##
+N1-ACETYLSPERMINE[CCO-EXTRACELLULAR]                          ## N1-acetylspermine
+CPD-568[CCO-EXTRACELLULAR]                                    ## N1-acetylspermidine
+CPD-3462[CCO-EXTRACELLULAR]                                   ## N8-acetylspermidine
+PUTRESCINE[CCO-EXTRACELLULAR]                                 ## putrescine
+CADAVERINE[CCO-EXTRACELLULAR]                                 ## cadaverine
+SPERMIDINE[CCO-EXTRACELLULAR]                                 ## spermidine
+SPERMINE[CCO-EXTRACELLULAR]                                   ## spermine
+4-AMINO-BUTYRALDEHYDE[CCO-EXTRACELLULAR]                      ## 4-aminobutanal
+AGMATHINE[CCO-EXTRACELLULAR]                                  ## agmatine
+
+## EXTRACELLULAR-WASTE-COMPOUNDS ##
+CREATINE[CCO-EXTRACELLULAR]                                   ## creatine
+UREA[CCO-EXTRACELLULAR]                                       ## urea
+INDOLE[CCO-EXTRACELLULAR]                                     ## indole
+METOH[CCO-EXTRACELLULAR]                                      ## methanol
+CARBON-MONOXIDE[CCO-EXTRACELLULAR]                            ## carbon monoxide
+CPD-6746[CCO-EXTRACELLULAR]                                   ## 1D-myo-inositol 2-monophosphate
+CPD-560[CCO-EXTRACELLULAR]                                    ## S-methyl-5-thio-D-ribose
+
+## PERIPLASMIC-WASTE-COMPOUNDS ##
+CPD-763[CCO-PERI-BAC]                                         ## arsenite
+CPD-108[CCO-PERI-BAC]                                         ## 4-methylphenol
+CPD-239[CCO-PERI-BAC]                                         ## cysteamine
+
+## CYTOSOLIC-WASTE-COMPOUNDS ##
+ACETOIN[CCO-CYTOSOL]                                          ## acetoin
+OXAMATE[CCO-CYTOSOL]                                          ## oxamate
+CPD-10774[CCO-CYTOSOL]                                        ## (2R,4S)-2-methyl-2,3,3,4-tetrahydroxytetrahydrofuran
+BUTANAL[CCO-CYTOSOL]                                          ## 1-butanal
+S-ADENOSYL-4-METHYLTHIO-2-OXOBUTANOATE[CCO-CYTOSOL]           ## S-adenosyl-4-methylthio-2-oxobutanoate
+CPD-1772[CCO-CYTOSOL]                                         ## 2-aminoacetaldehyde
+CH33ADO[CCO-CYTOSOL]                                          ## 5'-deoxyadenosine
+CPD0-2167[CCO-CYTOSOL]                                        ## 5-deoxy-D-ribose
+CPD-564[CCO-CYTOSOL]                                          ## S-ribosyl-L-homocysteine
+
+

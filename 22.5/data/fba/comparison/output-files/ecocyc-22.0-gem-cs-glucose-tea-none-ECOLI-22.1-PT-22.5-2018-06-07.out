@@ -1,0 +1,9 @@
+;; FBA output file generated on 07-Jun-2018  02:02:06 using version 201707
+;; FBA file used: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/data/fba/fba-examples/ecocyc-22.0-gem-cs-glucose-tea-none.fba
+;; Pathway Tools version used: 22.5
+;; ECOLI PGDB version used: 22.1
+
+
+(NIL
+ ("FBA for file '/homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/data/fba/fba-examples/ecocyc-22.0-gem-cs-glucose-tea-none.fba' failed with the solver state 'SOLVER-STATUS-INFEASIBLE'.
+"))

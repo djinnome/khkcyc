@@ -1,0 +1,9 @@
+;; FBA output file generated on 02-Mar-2018  01:51:57 using version 201707
+;; FBA file used: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.0/data/fba/fba-examples/ecocyc-22.0-gem-cs-glucose-tea-oxygen.fba
+;; Pathway Tools version used: 22.0
+;; ECOLI PGDB version used: 22.0
+
+
+(NIL
+ ("Error, in parameter 'remove-reactions:', the reaction or pathway 'TRANS-RXN-139' could not be found in the PGDB."
+  "Error, in parameter 'remove-reactions:', the reaction or pathway 'TRANS-RXN0-567' could not be found in the PGDB."))

@@ -1,0 +1,67 @@
+=========== PGDB comparison report generated on 2018-04-27 using version 201707 ===========
+
+KB-1: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/kb/ecobase.ocelot-2018-04-25_21-00-28
+KB-2: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/kb/ecobase.ocelot
+
+
+Basic reaction stats for KB-1 and KB-2
+--------------------------------------
+Basic reaction stats for ECOLI version 2018-04-25:
+Length all-rxns :all       = 2786
+Length all-rxns :metab-all = 2127
+Length all-rxns :transport = 503
+Number of rxns not included in FBA = 157
+Reactions not included in FBA that are balanced = 0 out of 157
+
+
+Basic reaction stats for ECOLI version 22.1:
+Length all-rxns :all       = 2787
+Length all-rxns :metab-all = 2128
+Length all-rxns :transport = 503
+Number of rxns not included in FBA = 157
+Reactions not included in FBA that are balanced = 0 out of 157
+
+
+Comparison statistics
+---------------------
+Number of unique reactions: KB-1 (2018-04-25) = 0   KB-2 (22.1) = 1
+Number of reactions with same IDs between KB-1 and KB-2 = 2786
+               exact:    2784
+             swapped:       0
+            diff-dir:       0
+    swapped-diff-dir:       0
+ same-subs-diff-cpds:       0
+           diff-subs:       2
+
+
+Unique reactions in KB-1 and KB-2
+---------------------------------
+Unique reactions in KB-1 (2018-04-25): 0
+
+Unique reactions in KB-2 (22.1): 1
+L2R   RXN-19737
+
+Inexact reaction matches between KB-1 and KB-2
+----------------------------------------------
+Note: Format is ((left-cpds) (right-cpds)) whenever cpds are shown.
+
+swapped: Reactions that swapped sides L2R/R2L but are effectively the same: 0
+
+diff-dir: Same reaction but different reaction direction: 0
+
+swapped-diff-dir: Reactions that swapped sides L2R/R2L with different rxn direction: 0
+
+same-subs-diff-cpds: Reactions with same substrates but different L/R cpds: 0
+
+diff-subs: Same rxn ID but different substrates: 2
+RXN: RXN0-5127
+KB-1: L2R    ((ADP-L-GLYCERO-D-MANNO-HEPTOSE CPD0-938)
+              (ADP CPD0-939 PROTON))
+KB-2: L2R    ((ADP-L-GLYCERO-D-MANNO-HEPTOSE CPD0-938)
+              (ADP CPD-21359 PROTON))
+
+RXN: TRANS-RXN-236
+KB-1: L2R    ((ATP CPD0-939 WATER) (ADP CPD0-939 Pi PROTON))
+KB-2: L2R    ((ATP LOS WATER) (ADP LOS Pi PROTON))
+
+

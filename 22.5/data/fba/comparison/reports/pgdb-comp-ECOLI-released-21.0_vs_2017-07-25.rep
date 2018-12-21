@@ -1,0 +1,213 @@
+=========== PGDB comparison report generated on 2017-07-26 using version 201707 ===========
+
+KB-1: /homedir/brg/aic/pgdbs/tier1/ecocyc/21.0/kb/ecobase.ocelot
+KB-2: /homedir/brg/aic/pgdbs/tier1/ecocyc/21.5/kb/ecobase.ocelot
+
+
+Basic reaction stats for KB-1 and KB-2
+--------------------------------------
+Basic reaction stats for ECOLI version 21.0:
+Length all-rxns :all       = 2686
+Length all-rxns :metab-all = 2051
+Length all-rxns :transport = 477
+Number of rxns not included in FBA = 158
+Reactions not included in FBA that are balanced = 4 out of 158
+CYTD-RED-RXN
+FAD-RED-RXN
+FMN-RED-RXN
+RXN-12876
+
+
+Basic reaction stats for ECOLI version 21.5:
+Length all-rxns :all       = 2715
+Length all-rxns :metab-all = 2076
+Length all-rxns :transport = 478
+Number of rxns not included in FBA = 161
+Reactions not included in FBA that are balanced = 4 out of 161
+CYTD-RED-RXN
+FAD-RED-RXN
+FMN-RED-RXN
+RXN-12876
+
+
+Comparison statistics
+---------------------
+Number of unique reactions: KB-1 (21.0) = 4   KB-2 (21.5) = 33
+Number of reactions with same IDs between KB-1 and KB-2 = 2682
+               exact:    2651
+             swapped:       0
+            diff-dir:       8
+    swapped-diff-dir:       1
+ same-subs-diff-cpds:       0
+           diff-subs:      22
+
+
+Unique reactions in KB-1 and KB-2
+---------------------------------
+Unique reactions in KB-1 (21.0): 4
+L2R   RXN0-7082
+L2R   RXN-16564
+L2R   RXN0-7097
+L2R   2.7.1.69-RXN
+
+Unique reactions in KB-2 (21.5): 33
+L2R   TRANS-RXN-218
+L2R   RXN-18604
+L2R   RXN-14107
+L2R   RXN-18605
+L2R   NITRATE-REDUCTASE-CYTOCHROME-RXN
+L2R   RXN-18584
+L2R   RXN-18708
+L2R   RXN-18702
+L2R   RXN0-7280
+NIL   RXN-18549
+L2R   RXN-18738
+L2R   RXN-9559
+L2R   RXN-18709
+L2R   RXN-18703
+NIL   RXN-18550
+L2R   RXN0-7272
+BOTH  SULFOCYS-RXN
+L2R   RXN-18739
+NIL   RXN0-7279
+L2R   RXN-9560
+L2R   RXN-18710
+L2R   RXN-18707
+L2R   RXN-18586
+L2R   RXN0-7275
+L2R   RXN-13072
+L2R   RXN-18819
+L2R   RXN-9562
+L2R   RXN-18737
+L2R   RXN0-7271
+L2R   RXN-18678
+L2R   TRANS-RXN-330
+L2R   RXN-18603
+L2R   RXN-18581
+
+Inexact reaction matches between KB-1 and KB-2
+----------------------------------------------
+Note: Format is ((left-cpds) (right-cpds)) whenever cpds are shown.
+
+swapped: Reactions that swapped sides L2R/R2L but are effectively the same: 0
+
+diff-dir: Same reaction but different reaction direction: 8
+KB-1  KB-2  RXN-ID
+L2R   R2L   RXN0-1133
+L2R   BOTH  O-SUCCHOMOSERLYASE-RXN
+NIL   L2R   GALACTOACETYLTRAN-RXN
+BOTH  L2R   SUCCDIAMINOPIMDESUCC-RXN
+R2L   BOTH  RXN-17897
+L2R   BOTH  TRANS-RXN0-517
+R2L   BOTH  FLAVONADPREDUCT-RXN
+NIL   L2R   RXN0-1882
+
+swapped-diff-dir: Reactions that swapped sides L2R/R2L with different rxn direction: 1
+RXN: HISTAMINOTRANS-RXN
+KB-1: L2R    ((GLT IMIDAZOLE-ACETOL-P) (2-KETOGLUTARATE L-HISTIDINOL-P))
+KB-2: BOTH   ((2-KETOGLUTARATE L-HISTIDINOL-P) (GLT IMIDAZOLE-ACETOL-P))
+
+
+same-subs-diff-cpds: Reactions with same substrates but different L/R cpds: 0
+
+diff-subs: Same rxn ID but different substrates: 22
+RXN: RXN-11361
+KB-1: L2R    ((ATP MPT-Synthases PROTON) (Carboxyadenylated-MPT-synthases PPI))
+KB-2: L2R    ((ATP MPT-Synthase-small-subunits PROTON) (Carboxyadenylated-MPT-synthases PPI))
+
+RXN: RXN-17363
+KB-1: L2R    ((Diacylglycerol-Prolipoproteins Phosphoglycerides)
+              (1-Lyso-phospholipids a-mature-triacylated-lipoprotein))
+KB-2: L2R    ((Diacylglycerol-Prolipoproteins Phosphoglycerides)
+              (1-Lyso-phospholipids a-mature-triacylated-lipoprotein PROTON))
+
+RXN: MERCAPYSTRANS-RXN
+KB-1: L2R    ((3-MERCAPTO-PYRUVATE HCN) (HSCN PROTON PYRUVATE))
+KB-2: L2R    ((3-MERCAPTO-PYRUVATE Red-Thioredoxin) (HS Ox-Thioredoxin PYRUVATE))
+
+RXN: RXN0-7003
+KB-1: L2R    ((EG12006-MONOMER MONOMER0-4279) (EG12007-MONOMER MONOMER0-4276))
+KB-2: BOTH   ((EG12006-MONOMER) (MONOMER0-4276))
+
+RXN: RXN-14014
+KB-1: R2L    ((DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE NADP WATER) (CPD-14443 NADPH PROTON))
+KB-2: R2L    ((DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE NAD-P-OR-NOP WATER)
+              (CPD-14443 NADH-P-OR-NOP PROTON))
+
+RXN: RXN0-3922
+KB-1: L2R    ((GAMMA-GLUTAMYL-GAMMA-AMINOBUTYRALDEH NAD WATER) (CPD-9000 NADH PROTON))
+KB-2: L2R    ((GAMMA-GLUTAMYL-GAMMA-AMINOBUTYRALDEH NAD-P-OR-NOP WATER)
+              (CPD-9000 NADH-P-OR-NOP PROTON))
+
+RXN: RXN0-986
+KB-1: L2R    ((1-ETHYLADENINE 2-KETOGLUTARATE OXYGEN-MOLECULE) (ACETALD ADENINE CARBON-DIOXIDE SUC))
+KB-2: L2R    ((2-KETOGLUTARATE an-iNisup1sup-ethyladenine-in-DNA OXYGEN-MOLECULE)
+              (ACETALD CARBON-DIOXIDE DNA-Adenines SUC))
+
+RXN: RXN-1381
+KB-1: L2R    ((GLYCEROL-3P Long-Chain-Acyl-CoAs) (ACYL-SN-GLYCEROL-3P CO-A))
+KB-2: L2R    ((ACYL-COA GLYCEROL-3P) (ACYL-SN-GLYCEROL-3P CO-A))
+
+RXN: RXN0-4761
+KB-1: BOTH   ((MANNITOL PD00369) (MONOMER0-2461))
+KB-2: BOTH   ((PD00369 PTSH-MONOMER) (MONOMER0-2461))
+
+RXN: RXN-18388
+KB-1: L2R    ((ATP PROTON Reduced-ferredoxins Sulfurylated-ThiI tRNA-uridines)
+              (AMP Oxidized-ferredoxins PPI Sulfur-Carrier-Proteins-ThiI tRNA-4-thiouridine))
+KB-2: L2R    ((ATP PROTON Reduced-ferredoxins Sulfurylated-ThiI Uracil-tRNAs)
+              (AMP Oxidized-ferredoxins PPI Sulfur-Carrier-Proteins-ThiI tRNA-4-thiouridine))
+
+RXN: ACETYLESTERASE-RXN
+KB-1: L2R    ((Acetic-Esters WATER) (ACET Alcohols PROTON))
+KB-2: L2R    ((Acetate-esters WATER) (ACET Alcohols PROTON))
+
+RXN: BETA-LACTAMASE-RXN
+KB-1: L2R    ((Beta-Lactams WATER) (CPD-8550))
+KB-2: L2R    ((Beta-Lactams WATER) (CPD-8550 PROTON))
+
+RXN: RXN0-3201
+KB-1: L2R    ((cleaved-lipoprotein-signal-peptide WATER) (Peptides-holder))
+KB-2: L2R    ((Lipoprotein-signal-peptide WATER) (Peptides-holder))
+
+RXN: RXN0-5021
+KB-1: NIL    ((Single-Stranded-DNAs) (Short-RNA-Fragments))
+KB-2: L2R    ((Ribonucleoside-Triphosphates Single-Stranded-DNAs) (PPI ssDNA-RNA-primer-hybrid))
+
+RXN: 3.4.11.2-RXN
+KB-1: L2R    ((POLYPEPTIDE WATER) (L-Amino-Acids POLYPEPTIDE))
+KB-2: L2R    ((Peptide-with-N-terminal-Alanine WATER) (L-ALPHA-ALANINE Peptides-holder PROTON))
+
+RXN: RXN-1623
+KB-1: L2R    ((ACYL-SN-GLYCEROL-3P Long-Chain-Acyl-CoAs) (CO-A L-PHOSPHATIDATE))
+KB-2: L2R    ((ACYL-COA ACYL-SN-GLYCEROL-3P) (CO-A L-PHOSPHATIDATE))
+
+RXN: TRANS-RXN0-538
+KB-1: L2R    ((CPD-497) (CPD-497))
+KB-2: L2R    ((CPD-497 PROTON) (CPD-497 PROTON))
+
+RXN: RXN0-7081
+KB-1: L2R    ((tRNA-containing-5-CarbMeAminome-2-ThioU) (GLYOX tRNA-Containing-5AminoMe-2-ThioUrdines))
+KB-2: L2R    ((FAD PROTON tRNA-containing-5-CarbMeAminome-2-ThioU WATER)
+              (FADH2 GLYOX tRNA-Containing-5AminoMe-2-ThioUrdines))
+
+RXN: RXN0-20
+KB-1: L2R    ((L-1-PHOSPHATIDYL-GLYCEROL Prolipoproteins) (MONOMER0-4342 SN-GLYCEROL-1-PHOSPHATE))
+KB-2: L2R    ((L-1-PHOSPHATIDYL-GLYCEROL Prolipoprotein-Cysteines)
+              (MONOMER0-4342 PROTON SN-GLYCEROL-1-PHOSPHATE))
+
+RXN: RXN0-5455
+KB-1: L2R    ((HYDROXYPROPANAL NAD WATER) (3-HYDROXY-PROPIONATE NADH PROTON))
+KB-2: L2R    ((HYDROXYPROPANAL NAD-P-OR-NOP WATER) (3-HYDROXY-PROPIONATE NADH-P-OR-NOP PROTON))
+
+RXN: RXN-17362
+KB-1: L2R    ((MONOMER0-4342 WATER)
+              (cleaved-lipoprotein-signal-peptide Diacylglycerol-Prolipoproteins))
+KB-2: L2R    ((MONOMER0-4342 WATER) (Diacylglycerol-Prolipoproteins Lipoprotein-signal-peptide))
+
+RXN: RXN-8342
+KB-1: L2R    ((PRECURSOR-Z Thiocarboxylated-MPT-synthases WATER) (CPD-4 MPT-Synthases PROTON))
+KB-2: L2R    ((PRECURSOR-Z Thiocarboxylated-MPT-synthases WATER)
+              (CPD-4 MPT-Synthase-small-subunits PROTON))
+
+

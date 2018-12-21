@@ -1,0 +1,9 @@
+;; FBA output file generated on 12-Sep-2017  03:42:01 using version 201707
+;; FBA file used: /homedir/brg/aic/pgdbs/tier1/ecocyc/21.5/data/fba/fba-examples/ecocyc-21.0-gem-full-nutrient-set-cs-glucose-tea-oxygen.fba
+;; Pathway Tools version used: 21.5
+;; ECOLI PGDB version used: 21.5
+
+
+(NIL
+ ("FBA for file '/homedir/brg/aic/pgdbs/tier1/ecocyc/21.5/data/fba/fba-examples/ecocyc-21.0-gem-full-nutrient-set-cs-glucose-tea-oxygen.fba' failed with the solver state 'SCIP-STATUS-OPTIMAL'.
+"))

@@ -1,0 +1,14 @@
+Growth condition                          FBA-succeeded?   Comparison status 
+
+cs-glucose-tea-none                       NIL              REPORT-GENERATED  
+cs-glucose-tea-oxygen                     NIL              NO-CHANGE         
+cs-glycerol-3p-tea-fumarate               T                NO-CHANGE         
+cs-lactose-tea-none                       T                REPORT-GENERATED  
+cs-oleate-tea-nitrate                     T                NO-CHANGE         
+cs-tryptophan-tea-none                    NIL              REPORT-GENERATED  
+full-nutrient-set-cs-glucose-tea-oxygen   NIL              NO-CHANGE         
+
+
+Generated reports can be found in the following directory with the following filename format:
+Filename: fba-comp-ecocyc-22.0-gem-{growth condition}-2018-08-06.rep
+Directory: /homedir/brg/aic/pgdbs/tier1/ecocyc/22.1/data/fba/comparison/reports/

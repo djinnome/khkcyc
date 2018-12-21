@@ -1,0 +1,117 @@
+=========== PGDB comparison report generated on 2017-10-12 using version 201707 ===========
+
+KB-1: /homedir/brg/aic/pgdbs/tier1/ecocyc/21.5/kb/ecobase.ocelot-2017-10-10_21-00-18
+KB-2: /homedir/brg/aic/pgdbs/tier1/ecocyc/21.5/kb/ecobase.ocelot
+
+
+Basic reaction stats for KB-1 and KB-2
+--------------------------------------
+Basic reaction stats for ECOLI version 2017-10-10:
+Length all-rxns :all       = 2727
+Length all-rxns :metab-all = 2087
+Length all-rxns :transport = 478
+Number of rxns not included in FBA = 162
+Reactions not included in FBA that are balanced = 4 out of 162
+CYTD-RED-RXN
+FAD-RED-RXN
+FMN-RED-RXN
+RXN-12876
+
+
+Basic reaction stats for ECOLI version 21.5:
+Length all-rxns :all       = 2728
+Length all-rxns :metab-all = 2088
+Length all-rxns :transport = 478
+Number of rxns not included in FBA = 162
+Reactions not included in FBA that are balanced = 4 out of 162
+CYTD-RED-RXN
+FAD-RED-RXN
+FMN-RED-RXN
+RXN-12876
+
+
+Comparison statistics
+---------------------
+Number of unique reactions: KB-1 (2017-10-10) = 0   KB-2 (21.5) = 1
+Number of reactions with same IDs between KB-1 and KB-2 = 2727
+               exact:    2715
+             swapped:       0
+            diff-dir:       1
+    swapped-diff-dir:       1
+ same-subs-diff-cpds:       1
+           diff-subs:       9
+
+
+Unique reactions in KB-1 and KB-2
+---------------------------------
+Unique reactions in KB-1 (2017-10-10): 0
+
+Unique reactions in KB-2 (21.5): 1
+L2R   RXN-19022
+
+Inexact reaction matches between KB-1 and KB-2
+----------------------------------------------
+Note: Format is ((left-cpds) (right-cpds)) whenever cpds are shown.
+
+swapped: Reactions that swapped sides L2R/R2L but are effectively the same: 0
+
+diff-dir: Same reaction but different reaction direction: 1
+KB-1  KB-2  RXN-ID
+L2R   BOTH  CYSTEINE-AMINOTRANSFERASE-RXN
+
+swapped-diff-dir: Reactions that swapped sides L2R/R2L with different rxn direction: 1
+RXN: RXN-15348
+KB-1: L2R    ((HS OXIDIZED-GLUTATHIONE) (CPD-11281 GLUTATHIONE))
+KB-2: BOTH   ((CPD-11281 GLUTATHIONE) (HS OXIDIZED-GLUTATHIONE))
+
+
+same-subs-diff-cpds: Reactions with same substrates but different L/R cpds: 1
+RXN: RXN0-2441
+KB-1: L2R    ((CPD-225 S-ADENOSYLMETHIONINE)
+              (ADENOSYL-HOMO-CYS MONOMETHYL-ESTER-OF-TRANS-ACONITATE))
+KB-2: L2R    ((CPD-225 S-ADENOSYLMETHIONINE S-ADENOSYLMETHIONINE)
+              (ADENOSYL-HOMO-CYS MONOMETHYL-ESTER-OF-TRANS-ACONITATE))
+
+
+diff-subs: Same rxn ID but different substrates: 9
+RXN: RXN-15131
+KB-1: L2R    ((L-CYSTATHIONINE) (2-AMINOACRYLATE HOMO-CYS PROTON))
+KB-2: L2R    ((L-CYSTATHIONINE) (2-AMINOACRYLATE HOMO-CYS))
+
+RXN: RXN-15125
+KB-1: L2R    ((SER) (2-AMINOACRYLATE PROTON WATER))
+KB-2: L2R    ((SER) (2-AMINOACRYLATE WATER))
+
+RXN: RXN-17910
+KB-1: L2R    ((5Prime-OH-Terminated-RNAs
+               RNA-with-3-prime-pp-5-prime-G-cap)
+              (GMP PROTON RNAs))
+KB-2: L2R    ((5Prime-OH-Terminated-RNAs
+               RNA-with-3-prime-pp-5-prime-G-cap)
+              (GMP PROTON RNA-Holder))
+
+RXN: RXN-15578
+KB-1: L2R    ((TRP) (2-AMINOACRYLATE INDOLE PROTON))
+KB-2: L2R    ((TRP) (2-AMINOACRYLATE INDOLE))
+
+RXN: ARYLSULFAT-RXN
+KB-1: L2R    ((Aryl-Sulfate WATER) (Aryl-Alcohol PROTON SULFATE))
+KB-2: L2R    ((Aryl-sulfates WATER) (Phenols PROTON SULFATE))
+
+RXN: RXN-15127
+KB-1: L2R    ((CPD-16015 PROTON WATER) (AMMONIUM PYRUVATE))
+KB-2: L2R    ((CPD-16015 WATER) (AMMONIUM PYRUVATE))
+
+RXN: RXN-8899
+KB-1: L2R    ((2-AMINOACRYLATE PROTON WATER) (AMMONIUM PYRUVATE))
+KB-2: L2R    ((2-AMINOACRYLATE WATER) (AMMONIUM PYRUVATE))
+
+RXN: RXN-15581
+KB-1: L2R    ((D-SERINE) (2-AMINOACRYLATE PROTON WATER))
+KB-2: L2R    ((D-SERINE) (2-AMINOACRYLATE WATER))
+
+RXN: RXN-15129
+KB-1: L2R    ((CYS) (2-AMINOACRYLATE HS PROTON))
+KB-2: L2R    ((CYS) (2-AMINOACRYLATE HS))
+
+
